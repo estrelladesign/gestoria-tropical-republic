@@ -694,7 +694,7 @@
     await saveAppt(appt);
 
     const msg = `Hola, quisiera agendar una cita en Gestoría Tropical Republic.%0A%0ANombre: ${encodeURIComponent(appt.name)}%0ATeléfono: ${encodeURIComponent(appt.phone)}%0AServicio: ${encodeURIComponent(appt.service)}%0AFecha: ${encodeURIComponent(appt.date)}%0AHora: ${encodeURIComponent(appt.time)}${appt.note ? '%0ANota: ' + encodeURIComponent(appt.note) : ''}`;
-    window.open(`https://wa.me/17872027606?text=${msg}`, '_blank');
+    window.location.href = `https://wa.me/17872027606?text=${msg}`;
 
     confirmText.textContent = '¡Cita registrada! Se abrió WhatsApp con los detalles — solo envía el mensaje para confirmar con Gestoría Tropical Republic.';
     confirmBox.classList.add('show');
